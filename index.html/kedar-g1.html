@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <style>
+     body{
+         padding: 0;
+         margin: 0;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+     }
+     .box{
+        width:18vmin;
+         height: 18vmin;
+         font-size: 3rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: rgb(96, 111, 238);
+        cursor: pointer;
+        transition:box-shadow 0.3s ease;
+     }
+     .box:hover{
+       box-shadow:  0 0 70px rgba(5, 48, 165, 0.76), 0 0 60px;
+       border: 2px solid rgb(64, 64, 236);
+     }
+     #game1{
+height: 60vmin;
+width: 60vmin;
+display: flex;
+flex-wrap: wrap;
+gap: 1.5vmin;
+justify-content: center;
+align-items: center;
+     }
+     .container{
+        justify-content: center;
+align-items: center;
+         display: flex;
+         text-align: center;
+border:2px solid #0f267f;
+height: 35rem;
+gap: 1.5vmin;
+     }
+    h1{
+      text-align: center;
+      color: azure;
+    }
+    #Restart{
+      font-size: 2rem;
+      border: 2px solid rgb(20, 95, 194);
+      border-radius: 1rem;
+      color: aliceblue;
+      background-color: rgb(248, 206, 66);
+    }
+    #Restart:hover{
+       box-shadow:  0 0 70px rgb(243, 80, 4), 0 0 60px;
+       border: 2px solid rgb(255, 123, 0);
+    }
+    .winner {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    background-color: rgb(138, 166, 241);
+    box-shadow: 0 0 10px blue;
+  }
+  to {
+    background-color: rgb(255, 215, 0);
+    box-shadow: 0 0 30px gold;
+  }
+}
+.navbar {
+color: white;
+ background: linear-gradient(90deg,  #5674ea,  #132f9f , #0f267f)
+}
+.navbar .nav-link,
+.navbar-brand {
+  color: white !important;
+}
+#li{
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1.1rem;
+ 
+}
+#li1{
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1.3rem;
+ padding: 6px;
+}
+h2{
+  color: aliceblue;
+  text-align: center;
+}
+.image{
+  display: flex;
+}
+@media (max-width:820px) {
+.image{
+ flex-wrap: wrap;
+}
+}
+hr{
+  color: rgb(242, 246, 250);
+}
+      </style>
+<body>
+  
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid" id="navbar">
+      <a class="navbar-brand" id="nav">KD Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  href="kedar-1.html"id="li">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="kedar5.html"id="li1">About Us & feedback</a>
+          </li>
+         
+         
+        </ul>
+        <form class="d-flex " role="search">
+          <li class="nav-item dropdown ">
+         
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="kedar3.html">HTML.Notes</a></li>
+              <li><a class="dropdown-item" href="kedar2.html">CSS.Notes</a></li>
+              <li><a class="dropdown-item" href="kedar4.html">Javascript.Notes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item"href="#">Project</a></li>
+            </ul>
+          </li>
+          <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" placeholder="Search">
+            Notes & Project
+          </a>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="container-fluid">
+  <h1><u>Projects by level</u></h1>
+  <hr class="divider">
+  <h2>You can make this webpage by HTML & CSS</h2>
+<img src="bhtml.jpg" alt="image" class="img-fluid">
+<hr class="divider">
+<h2>You can make this webpage by HTML & advance CSS</h2>
+<img src="b2html.jpg" alt="image" class="img-fluid">
+<hr class="divider">
+<h2>You can make this sign-up/ sign-in page by HTML , CSS & simple Javascript</h2>
+<img src="b3html,css.jpg" alt="image"class="img-fluid">
+<hr class="divider">
+
+<div class="image">
+  <img src="b4htmlcss.jpg" alt="image"class="img-fluid">
+<h2>You can make this kind of website + login page at once  by HTML , CSS & Javascript</h2>
+</div>
+<br>
+<hr class="divider">
+<div class="image">
+  <img src="b5html,css,js.jpg" alt="image"class="img-fluid">
+  <h2>This is a multi‑page website; other pages are shown on the left side of the image.</h2>
+</div>
+</div>
+<hr class="divider">
+  <h1>Tic-Tac-Toe</h1>
+  <li><hr class="dropdown-divider"></li>
+<div class="container" >
+ 
+
+ <div id="game1">
+  
+    <button class="box" value="0" onclick="game(this)"></button>
+    <button class="box" value="0" onclick="game(this)"></button>
+    <button class="box" value="0" onclick="game(this)"></button><br>
+    
+  
+    <button class="box" value="0" onclick="game(this)"></button>
+    <button class="box" value="0" onclick="game(this)"></button>
+    <button class="box"value="0" onclick="game(this)"></button><br>
+  
+    <button class="box" value="0" onclick="game(this)"></button>
+    <button class="box" value="0" onclick="game(this)"></button>
+    <button class="box" value="0" onclick="game(this)"></button>
+    <button id="Restart" onclick="restart()">Restart</button>
+ </div>         
+           
+</div>
+
+<script>
+  
+  
+    let curr_mode = "X";  // start with X
+
+function game(button) {
+  if (button.value === "0") {   // only allow move if empty
+    button.innerText = curr_mode;
+    button.value = curr_mode;
+    if (checkWinner()) return; 
+    // toggle mode
+    curr_mode = (curr_mode === "X") ? "O" : "X";
+  }
+}
+function restart() {
+  let buttons = document.getElementsByClassName("box");
+  for (let btn of buttons) {
+    btn.innerText = "";
+    btn.value = "0";  
+    btn.classList.remove("winner"); // reset to empty state
+  }
+  curr_mode = "X";     // reset turn to X
+}
+function checkWinner() {
+  let buttons = document.getElementsByClassName("box");
+  let values = Array.from(buttons).map(btn => btn.value);
+
+  const winPatterns = [
+    [0,1,2], [3,4,5], [6,7,8], // rows
+    [0,3,6], [1,4,7], [2,5,8], // columns
+    [0,4,8], [2,4,6]           // diagonals
+  ];
+
+  for (let pattern of winPatterns) {
+    let [a,b,c] = pattern;
+    if (values[a] !== "0" && values[a] === values[b] && values[b] === values[c]) {
+      // add animation class to winning buttons
+      buttons[a].classList.add("winner");
+      buttons[b].classList.add("winner");
+      buttons[c].classList.add("winner");
+
+      alert(values[a] + " wins!");
+      return true;
+    }
+  }
+  return false;
+}
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS Notes</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    
+    html, body {
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(to right top, #9db2f7, #2e31f8);
+      color: white;
+    }
+
+    
+    #navbar {
+      background-color: #103a82;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: white !important;
+    }
+
+    #il, #il1 {
+      border: 1px solid white;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+    }
+
+    #ex, #ex1, #ex2, #ex3 {
+      border: 2px solid rgba(252, 211, 29, 0.6);
+      border-radius: 8px;
+      background: linear-gradient(to right top, #853be6, #2e31f8);
+      color: #fff;
+      padding: 10px;
+      margin-top: 10px;
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+
+    
+    .animate {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.7s ease;
+    }
+
+    .animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .container {
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    h3 {
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h3>KD Navbar</h3></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="kedar-1.html" id="il">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kedar5.html" id="il1">About Us & Feedback</a>
+        </li>
+      </ul>
+
+      <form class="d-flex " role="search">
+        <li class="nav-item dropdown ">
+       
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="kedar3.html">HTML.Notes</a></a></li>
+            <li><a class="dropdown-item" href="kedar2.html"> CSS.Notes</a></li>
+           
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="kedar-g1.html">Project</a></li>
+          </ul>
+        </li>
+        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" placeholder="Search">
+          Notes & Project 
+        </a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4 border p-3">
+
+  <h1 class="animate">
+    What is JS?<br>
+    JS is a programming language used to add logic to webpages.
+  </h1>
+
+  <hr>
+
+  <h3 class="animate">Comment: /*...*/ or // for one line.</h3>
+
+  <hr>
+
+  <h3 class="animate">
+    Data Types:<br>
+    Primitive → Number, String, Boolean, Undefined, Null, BigInt, Symbol
+  </h3>
+
+  <hr>
+
+  <h3 class="animate">
+    Arithmetic operations: +, -, *, /<br>
+    Comparison: ==, ===, !==
+  </h3>
+
+  <hr>
+
+  <h3 class="animate">
+    Conditional Statements:
+    <div id="ex">
+      if (a === "blue") { color = "black"; }<br>
+      else { color = "white"; }<br>
+      else if (a === "blue") { color = "pink"; }
+    </div>
+  </h3>
+
+  <hr>
+
+  <h3 class="animate">
+    Ternary Operator:
+    <div id="ex1">age > 18 ? "adult" : "not adult";</div>
+  </h3>
+
+  <hr>
+
+  <h3 class="animate">
+    Loops:
+    <div id="ex2">
+      for (let i = 1; i &lt; 5; i++) {<br>
+      console.log("college");<br>
+      }
+    </div>
+  </h3>
+
+  <hr>
+
+  <h3 class="animate">
+    String Methods:<br>
+    toUpperCase() → GOD<br>
+    toLowerCase() → god
+  </h3>
+
+  <hr>
+
+  <h3 class="animate">
+    Array:
+    <div id="ex3">
+      let heroes = ["Ironman", "Hulk", "Thor"];
+    </div>
+  </h3>
+
+  <hr>
+
+  <h3 class="animate">
+    Important:<br>
+    document.getElementById("name")<br>
+    document.getElementsByClassName("name")<br>
+    document.getElementsByTagName("p")
+  </h3>
+
+</div>
+
+<script>
+  const elements = document.querySelectorAll(".animate");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("show");
+        }, index * 120);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+   
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to right top, #cad7e9, #0b8ce9);
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+  
+    #header {
+      background: linear-gradient(90deg, #142796b7, #1062dd9d, #acb8fc80);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #5674ea, #132f9f, #0f267f);
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: white !important;
+    }
+
+    #li,
+    #li1 {
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    #ul {
+      padding: 1rem;
+      display: block;
+    }
+
+    #ul li:hover {
+      background-color: #2556f7;
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+
+    #flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #img4 {
+      max-height: 20rem;
+      max-width: 20rem;
+    }
+
+    #div2 {
+      color: white;
+      background: linear-gradient(to right top, #dbf308, #f35e08, #f3db07);
+      max-width: 600px;
+      padding: 15px;
+    }
+
+    #p,
+    #p2,
+    #p3 {
+      font-size: 1.2rem;
+      background: linear-gradient(to right top, #b3cff7, #078eee, #054775);
+      text-align: center;
+      padding: 10px;
+      min-height: 120px;
+    }
+
+    #img,
+    #img2,
+    #img3 {
+      height: 6rem;
+    }
+
+    .animate {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.7s ease;
+    }
+
+    .animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  

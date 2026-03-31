@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Notes</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Prevent horizontal scroll */
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(to right top, #9db2f7, #2e31f8);
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #103a82;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: white !important;
+    }
+
+    #il,
+    #il1 {
+      border: 1px solid white;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+    }
+
+    /* Text section */
+    #div1 {
+      font-size: 1.4rem;
+    }
+
+    /* Paragraph styling */
+    .note-box {
+      color: #6d6d6c;
+    }
+
+    /* Scroll animation */
+    .animate {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: all 0.7s ease;
+    }
+
+    .animate.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .container {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <h3>KD Navbar</h3>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="kedar-1.html" id="il">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kedar5.html  " id="il1">About Us & Feedback</a>
+          </li>
+        </ul>
+        <form class="d-flex " role="search">
+          <li class="nav-item dropdown ">
+
+            <ul class="dropdown-menu">
+
+              <li><a class="dropdown-item" href="kedar2.html">CSS.Notes</a></li>
+              <li><a class="dropdown-item" href="kedar4.html" id="il">JavaScript.Notes</a></a></li>
+              <hr class="dropdown-divider">
+              <li><a class="dropdown-item" href="kedar-g1.html">Project</a></li>
+            </ul>
+          </li>
+          <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            placeholder="Search">
+            Notes & Project
+          </a>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="container border mt-3 p-3">
+
+    <h1 class="animate">
+      Easy boilerplate → type ! and press enter
+    </h1>
+
+    <h1 class="animate">
+      Every HTML element has opening & closing tags
+    </h1>
+
+    <hr>
+
+    <div id="div1">
+
+      &lt;h1&gt;Heading&lt;/h1&gt;
+      <p class="card card-body note-box animate">
+        h tag is used for headings. Bigger number = smaller size.
+      </p>
+
+      <hr>
+
+      &lt;p&gt;Paragraph&lt;/p&gt;
+      <p class="card card-body note-box animate">
+        p tag is used for writing paragraphs.
+      </p>
+
+      <hr>
+
+      &lt;button&gt;Click&lt;/button&gt;
+      <p class="card card-body note-box animate">
+        button tag is used to add buttons.
+      </p>
+
+      <hr>
+
+      &lt;u&gt;text&lt;/u&gt;
+      <p class="card card-body note-box animate">
+        u tag is used to underline text.
+      </p>
+
+      <hr>
+
+      &lt;ul&gt;&lt;li&gt;item&lt;/li&gt;&lt;/ul&gt;
+      <p class="card card-body note-box animate">
+        ul tag creates unordered list.
+      </p>
+
+      <hr>
+
+      &lt;ol&gt;&lt;li&gt;item&lt;/li&gt;&lt;/ol&gt;
+      <p class="card card-body note-box animate">
+        ol tag creates ordered list.
+      </p>
+
+      <hr>
+
+      &lt;li&gt;item&lt;/li&gt;
+      <p class="card card-body note-box animate">
+        li tag stores list items.
+      </p>
+
+      <hr>
+
+      &lt;img src="image.jpg"&gt;
+      <p class="card card-body note-box animate">
+        img tag is used to add images.
+      </p>
+
+      <hr>
+
+      &lt;table&gt;...&lt;/table&gt;
+      <p class="card card-body note-box animate">
+        table → table, tr → row, th → heading, td → data.
+      </p>
+
+      <hr>
+
+      &lt;form&gt;&lt;/form&gt;
+      <p class="card card-body note-box animate">
+        form tag is used to create forms.
+      </p>
+
+      <hr>
+
+      &lt;input&gt;
+      <p class="card card-body note-box animate">
+        input tag is used for user input.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const elements = document.querySelectorAll(".animate");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("show");
+          }, index * 120);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

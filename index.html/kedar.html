@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    #div1 {
+        text-align: center;
+        background-color: #3a30ec;
+        padding: 10px;
+        color: #a4c4e4;
+        border-radius: 1rem;
+    }
+
+    .section {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .section img {
+        height: 120px;
+    }
+
+    .box-style {
+        background-color: #98acf0;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    #button1 {
+        display: block;
+        margin: 20px auto;
+        height: 3rem;
+        width: 12rem;
+        border-radius: 1rem;
+    }
+
+    #div4 {
+        display: none;
+    }
+
+    #jsj {
+        height: 190px;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        background: linear-gradient(90deg, #8899e4, #214af0, #092288);
+        font-size: 2rem;
+        border-radius: 1rem;
+    }
+
+    .nav-row {
+        display: flex;
+        gap: 50px;
+        color: white;
+    }
+
+    .navbar a,
+    .navbar h4,
+    .navbar h2 {
+        color: white;
+    }
+
+    #div4 {
+        background-image: url(bg1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:none;
+
+
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #h12 {
+        text-align: center;
+        color: white;
+    }
+
+    #h32 {
+        text-align: center;
+        color: white;
+    }
+    #but{
+        text-align: center;
+        color: white;
+        align-items: center;
+
+    }
+</style>
+
+
+<body>
+
+    <div class="container">
+
+
+        <div id="div3">
+
+
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <h2>KD Coding</h2>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">
+                                    <h5>Home</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h5>Link</h5>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <button class="btn btn-outline-success" onclick="showForm()">Sign Up</button>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div id="div1">
+                <h1>Learn Web Coding Basics</h1>
+                <p> HTML / CSS / JavaScript</p>
+            </div>
+
+            <br>
+
+            <div class="section border">
+                <img src="html.jpg" alt="">
+                <div>
+                    <h4><u>What is HTML?</u></h4>
+                    <p>HTML is the structure of a webpage.</p>
+
+                    <button id="btn1" class="btn btn-primary mb-2">HTML Example</button>
+                    <div id="box1" class="card card-body mb-3" style="display:none;">
+
+                        &lt;h1&gt;Hello World&lt;/h1&gt;<br>
+                        &lt;p&gt;Paragraph&lt;/p&gt;
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+
+
+            <div class="section border">
+                <img src="css.webp" alt="">
+                <div>
+                    <h4><u>What is CSS?</u></h4>
+                    <p>CSS controls design like colors and layout.</p>
+
+                    <button id="btn2" class="btn btn-success mb-2">CSS Example</button>
+                    <div id="box2" class="card card-body mb-3" style="display:none;">
+
+                        body { background: lightblue; }<br>
+                        h1 { color: black; }
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+
+
+            <div class="section border">
+                <img src="image-3.webp" alt="" id="jsj">
+                <div>
+                    <h4><u>What is JavaScript?</u></h4>
+                    <p>JavaScript adds interactivity.</p>
+
+                    <button id="btn3" class="btn btn-warning mb-2">JS Example</button>
+                    <div id="box3" class="card card-body" style="display:none;">
+                        alert("Hello World");
+                    </div>
+
+                </div>
+
+            </div>
+            <button id="button1" class="btn btn-outline-success" onclick="alert('Please sign up first!')">
+                Start Coding
+            </button>
+        </div>
+
+        <div id="div4" class="border">
+<div id="div5">
+           
+                <form onsubmit="validateForm(event)">
+
+                    <h1 id="h12"><u>Sign up to Get Started</u></h1>
+                    <br>
+                    <h3 id="h32">join us and start learning web development today!</h3>
+                    <br>
+
+                    <div class="mb-3">
+                        <input type="text" id="fullname" class="form-control" placeholder="Full Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" id="email" class="form-control" placeholder="Email">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="password" id="password" class="form-control" placeholder="Password">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password">
+                    </div>
+
+                   
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        
+                        <button class="btn btn-primary" type="submit">Sign Up</button>
+                      </div>
+                </form>
+            
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        function setupToggle(btnId, boxId) {
+            let btn = document.getElementById(btnId);
+            let box = document.getElementById(boxId);
+
+            
+            btn.onclick = function () {
+                box.style.display = "block";
+            };
+
+          
+            btn.ondblclick = function () {
+                box.style.display = "none";
+            };
+        }
+
+       
+        setupToggle("btn1", "box1");
+        setupToggle("btn2", "box2");
+        setupToggle("btn3", "box3");
+
+
+        function showForm() {
+            document.getElementById("div3").style.display = "none";
+            document.getElementById("div4").style.display = "flex";
+        }
+
+        function validateForm(e) {
+            e.preventDefault();
+
+            let name = document.getElementById("fullname").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let pass = document.getElementById("password").value.trim();
+            let confirm = document.getElementById("confirmPassword").value.trim();
+
+            if (!name) return alert("Enter name");
+            if (!email) return alert("Enter email");
+            if (!pass) return alert("Enter password");
+            if (!confirm) return alert("Confirm password");
+
+            if (pass !== confirm) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            alert("Signup successful!");
+            window.open("kedar-1.html");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Notes</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right top, #9db2f7, #2e31f8);
+      color: white;
+     
+    }
+
+    
+    #navbar {
+      background-color: #103a82;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: white !important;
+    }
+
+    #il, #il1 {
+      border: 1px solid white;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+    }
+
+    
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2rem; }
+
+   
+    .example-box {
+      max-width: 100%;
+  word-wrap: break-word;
+      font-size: 1.1rem;
+      border: 2px solid white;
+      border-radius: 1rem;
+      background: linear-gradient(to right top, #f5fafa, #f1a247f6);
+      color: #333;
+      padding: 1rem;
+    }
+    
+   
+    html, body {
+  overflow-x: hidden;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease;
+}
+
+.container {
+  overflow: hidden;
+}
+
+    .animate.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h3>KD Navbar</h3></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="kedar-1.html" id="il">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kedar5.html" id="il1">About Us & Feedback</a>
+        </li>
+      </ul>
+      <form class="d-flex " role="search">
+        <li class="nav-item dropdown ">
+       
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="kedar3.html">HTML.Notes</a></a></li>
+            <li><a class="dropdown-item" href="kedar4.html"> JavaScript.Notes</a></li>
+           
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="kedar-g1.html">Project</a></li>
+          </ul>
+        </li>
+        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" placeholder="Search">
+          Notes & Project 
+        </a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container overflow-hidden">
+
+  <h1>CSS</h1>
+
+  <h2 class="animate">In CSS first we select elements using tag, id or class.</h2>
+
+  <p class="example-box animate">
+    Ex:<br>
+    &lt;p id="p"&gt;Paragraph&lt;/p&gt; → use #<br>
+    &lt;p class="p"&gt;Paragraph&lt;/p&gt; → use .
+  </p>
+
+  <h2 class="animate">Then we apply styles inside curly brackets.</h2>
+
+  <p class="example-box animate">
+    #p { font-size: 20px; color: blue; }<br>
+    .p { font-size: 20px; color: blue; }
+  </p>
+
+  <h2 class="animate">CSS uses units like px, rem etc.</h2>
+
+  <h4 class="animate">Font-size: 1rem;</h4>
+  <p class="example-box animate">Used to change text size.</p>
+
+  <h4 class="animate">Color: blue;</h4>
+  <p class="example-box animate">Used to change text color.</p>
+
+  <h4 class="animate">Background-color: red;</h4>
+  <p class="example-box animate">Used for background color.</p>
+
+  <h4 class="animate">Height / Width</h4>
+  <p class="example-box animate">Used to set size of elements.</p>
+
+  <h4 class="animate">Text-align: center;</h4>
+  <p class="example-box animate">Align text position.</p>
+
+  <h4 class="animate">Border & Border-radius</h4>
+  <p class="example-box animate">Used for borders and rounded corners.</p>
+
+  <h4 class="animate">Display: flex;</h4>
+  <p class="example-box animate">Used for layout.</p>
+
+  <h4 class="animate">Position & Float</h4>
+  <p class="example-box animate">Used for positioning elements.</p>
+
+</div>
+
+<script>
+  const elements = document.querySelectorAll(".animate");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach((el) => observer.observe(el));
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

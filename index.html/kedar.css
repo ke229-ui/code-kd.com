@@ -1,0 +1,228 @@
+#h1{
+    font-size: 2.5rem;
+    text-align: center;
+    }
+    #div1{
+    text-align: center;
+    background-color: #3a30ec;
+    padding: 1px;
+    color: #a4c4e4;
+    border-radius: 2rem;
+  
+    }
+    #p1{
+        font-size: 1.5rem;
+    }
+    .h3{
+    font-size: 1.5rem;
+    }
+    #p{
+    font-size: 1rem;
+    }
+    #hml, #css, #js {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+     
+    }
+    #p2{
+    font-size: 1rem;
+    border: 1px solid #98acf0;
+    border-radius: 5px;
+    }
+    
+    #bg,#bg2,#bg3{
+      background-color: #98acf0;
+    }
+   
+    #id2{
+      width: 8rem;
+    }
+    #logo2{
+    height: 8rem;
+    }
+    #logo{
+      height:8rem;
+      }
+   
+    #p3{
+        font-size: 1rem;
+       
+        border-radius: 5px;
+    background-color: #98acf0;
+        }
+        #logo3{
+          height: 14rem;
+        }
+      
+    #p4{
+            font-size: 1rem;
+            border: 1px solid #98acf0;
+    
+            border-radius: 5px;
+            background-color: #98acf0;
+            }
+            #button1{
+    height: 3rem;
+    width: 10rem;
+    
+    border-radius: 1rem;
+    font-size: 1rem;
+    
+      display: block;
+      margin: 20px auto;
+    }
+    
+    #div2{
+        color: #a4c4e4;
+        background-color:#20476e;
+       
+        padding: 2px;
+        border-radius: 2rem;
+    }
+    #h12{
+      text-align: center;
+    }
+    #h32{
+      text-align: center;
+    }
+   #form{
+    background: linear-gradient(to right top, #92f6fd, #0b0fe9);
+     color:white ;   
+   }
+   
+   #logo44 {
+    min-width: 29rem;
+  }
+   @media (max-width:912px) {
+     #div4{
+       flex-wrap: wrap;
+     }
+     
+   }
+   #div4{
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+  
+    
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+   
+   
+   
+    #navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      background: linear-gradient(90deg, #8899e4, #214af0, #092288);
+      font-size: 2rem;
+      border-radius: 1rem;
+    }
+  
+    #nav-row {
+      display: flex;
+      gap: 50px;
+      color: white;
+    }
+  
+    #navbar a,
+    #navbar h4,
+    #navbar h2 {
+      color: white;
+    }
+  
+    .box {
+      background-color: steelblue;
+     width: 100%;
+      animation: rotateXBox 2s linear 1;
+      color: white;
+      border-radius: 1rem;
+    }
+  
+    @keyframes rotateXBox {
+      0% { transform: rotateX(0deg); width: 300px; }
+      100% { transform: rotateX(360deg); width: 100%; }
+    }
+  
+    #logo44 {
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: dropIn 1s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+    
+    #form {
+     
+      transform: scale(0.9);
+      animation: popIn 1s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+    
+    #h12, #h32 {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: bounceUp 1s ease-out forwards;
+    }
+    
+    #h12 { animation-delay: 1.2s; }
+    #h32 { animation-delay: 1.5s; }
+    
+    #input .form-floating,
+    #input1,
+    #input2,
+    #input3 {
+     
+      transform: translateY(40px);
+      animation: bounceUp 0.8s ease-out forwards;
+    }
+    
+    #fullname { animation-delay: 1.8s; }
+    #email    { animation-delay: 2.1s; }
+    #pass2    { animation-delay: 2.4s; }
+    #pass1    { animation-delay: 2.7s; }
+    
+   
+    #inlineFormCheck {
+     
+      transform: scale(0.8);
+      animation: popIn 0.8s ease-out forwards;
+      animation-delay: 3s;
+    }
+    
+
+    button[type="submit"] {
+      
+      transform: translateY(30px);
+      animation: bounceUp 0.8s ease-out forwards;
+      animation-delay: 3.3s;
+    }
+    
+   
+    @keyframes dropIn {
+      from { opacity: 0; transform: translateY(-50px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    
+    @keyframes bounceUp {
+      0%   { opacity: 0; transform: translateY(50px); }
+      60%  { opacity: 1; transform: translateY(-10px); }
+      80%  { transform: translateY(5px); }
+      100% {  opacity: 1;transform: translateY(0); }
+    }
+   */
+    body{
+    width:100%;
+    }
+    .container{
+      margin: 0;
+    }
